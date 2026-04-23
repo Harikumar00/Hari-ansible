@@ -121,12 +121,25 @@ Backend: http://13.57.13.74:3001
 ---
 ## Screenshots
 
-Web Ec2 instance
+Web Ec2 instance:
 <img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 54 53" src="https://github.com/user-attachments/assets/3673db1d-e9b1-4089-8e82-df7a15a40ce7" />
 
-DB Ec2 instance
+DB Ec2 instance:
 <img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 55 51" src="https://github.com/user-attachments/assets/50edb57b-1889-4e72-afac-1db85e71a29e" />
 
+Website Curl Terminal:
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 29 54" src="https://github.com/user-attachments/assets/2cb187a2-2522-4d37-8b35-cd431012ca0b" />
+
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 30 00" src="https://github.com/user-attachments/assets/5ca20f5b-f01f-49e2-969c-500282d567b6" />
+
+Website homepage in browser:
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 28 43" src="https://github.com/user-attachments/assets/68c5939b-7b2b-477b-ae5e-87968ffbab82" />
+
+Website Add experience page in browser:
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 28 55" src="https://github.com/user-attachments/assets/f4c416ec-a165-4ecd-9aba-acef505ffe2a" />
+
+Website trip details page in browser:
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 29 13" src="https://github.com/user-attachments/assets/14a6647c-9216-4680-a4ad-425d907da1d6" />
 
 
 
