@@ -141,9 +141,17 @@ Website Add experience page in browser:
 Website trip details page in browser:
 <img width="1440" height="900" alt="Screenshot 2026-04-23 at 11 29 13" src="https://github.com/user-attachments/assets/14a6647c-9216-4680-a4ad-425d907da1d6" />
 
+Terraform Apply:
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 12 21 59" src="https://github.com/user-attachments/assets/e53b5845-1e1b-451b-9f5f-db5695cd3915" />
 
+Ansible inventory.ini :
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 12 25 09" src="https://github.com/user-attachments/assets/7c145483-b89b-4f8a-a8f2-b3cf682ae3bc" />
 
+Ansible web.yml : 
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 12 26 01" src="https://github.com/user-attachments/assets/0588eee3-2b6a-42c4-b629-e179c64b094e" />
 
+PM2 Status : 
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 12 27 06" src="https://github.com/user-attachments/assets/451835c8-880c-4c54-ba5f-97c7ea0b0599" />
 
 
 
