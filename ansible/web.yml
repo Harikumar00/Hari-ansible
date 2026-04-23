@@ -1,0 +1,57 @@
+- name: Setup Web Server
+  hosts: web
+  become: yes
+
+  tasks:
+
+    - name: Install Node.js
+      shell: |
+        curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+        apt-get install -y nodejs
+
+    - name: Install Git
+      apt:
+        name: git
+        state: present
+
+    - name: Install PM2 globally
+      npm:
+        name: pm2
+        global: yes
+
+    - name: Clone repo
+      git:
+        repo: "https://github.com/UnpredictablePrashant/TravelMemory"
+        dest: /home/ubuntu/TravelMemory
+        force: yes
+
+    # 🔹 BACKEND
+    - name: Install backend dependencies
+      shell: |
+        cd /home/ubuntu/TravelMemory/backend
+        npm install
+
+    - name: Create .env file
+      copy:
+        dest: /home/ubuntu/TravelMemory/backend/.env
+        content: |
+          MONGO_URI=mongodb://172.31.1.238:27017/travelmemory
+          PORT=3001
+
+    - name: Start backend with PM2
+      shell: |
+        cd /home/ubuntu/TravelMemory/backend
+        pm2 delete backend || true
+        pm2 start index.js --name backend
+        pm2 save
+
+    # 🔹 FRONTEND
+    - name: Install frontend dependencies
+      shell: |
+        cd /home/ubuntu/TravelMemory/frontend
+        npm install
+
+    - name: Build frontend
+      shell: |
+        cd /home/ubuntu/TravelMemory/frontend
+        npm run build

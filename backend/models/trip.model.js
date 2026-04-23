@@ -20,14 +20,13 @@ const tripSchema = mongoose.Schema({
     type: String
   },
   placesVisited: {
-    type: String
+    type: [String]
   },
   totalCost: {
     type: Number
   },
   tripType: {
     type: String,
-    enum: ['backpacking', 'leisure', 'business']
   },
   experience: {
     type: String

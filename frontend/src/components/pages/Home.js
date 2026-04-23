@@ -10,39 +10,42 @@ export default function Home() {
     axios.get(`${baseUrl}/trip/`).then((res) => setData(res.data));
   }, []);
   if (data) {
-    return (
-      <div style={{ margin: "2%" }}>
-        {data.map((e) => {
-          if (e.featured) {
-            return (
-              <FeaturedCard
-                title={e.tripName}
-                tripType={e.tripType}
-                description={e.shortDescription}
-                id={e._id}
-              ></FeaturedCard>
-            );
-          } else {
-            return null;
-          }
-        })}
-        {data.map((e) => {
-          if (!e.featured) {
-            return (
-              <Card
-                title={e.tripName}
-                tripType={e.tripType}
-                description={e.shortDescription}
-                id={e._id}
-              ></Card>
-            );
-          } else {
-            return null;
-          }
-        })}
-      </div>
-    );
-  } else {
-    return <>Loading...</>;
-  }
+  return (
+    <div style={{ margin: "2%" }}>
+      
+      {data.length === 0 && <h3>No trips found</h3>}  {/* 👈 ADD THIS */}
+
+      {data.map((e) => {
+        if (e.featured) {
+          return (
+            <FeaturedCard
+              key={e._id}
+              title={e.tripName}
+              tripType={e.tripType}
+              description={e.shortDescription}
+              id={e._id}
+            />
+          );
+        }
+        return null;
+      })}
+
+      {data.map((e) => {
+        if (!e.featured) {
+          return (
+            <Card
+              key={e._id}
+              title={e.tripName}
+              tripType={e.tripType}
+              description={e.shortDescription}
+              id={e._id}
+            />
+          );
+        }
+        return null;
+      })}
+    </div>
+  );
+}
+ return <h3>Loading...</h3>;
 }

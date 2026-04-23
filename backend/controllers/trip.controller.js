@@ -1,9 +1,10 @@
-const tripModel = require('../models/trip.model')
+const tripModel = require('../models/trip.model');
 
 async function tripAdditionController(req, res){
-    console.log(req.body)
+    console.log("BODY:", req.body);
+
     try{
-        let tripDetail = tripModel.Trip({
+        const tripDetail = new tripModel.Trip({   // keep as-is if your export supports it
             tripName: req.body.tripName,
             startDateOfJourney: req.body.startDateOfJourney,
             endDateOfJourney: req.body.endDateOfJourney,
@@ -15,12 +16,15 @@ async function tripAdditionController(req, res){
             image: req.body.image,
             shortDescription: req.body.shortDescription,
             featured: req.body.featured
-        })
-        await tripDetail.save()
-        res.send('Trip added Successfully')
+        });
+
+        await tripDetail.save();
+
+        res.send('Trip added Successfully');
+
     }catch(error){
-        console.log('ERROR')
-        res.send('SOMETHING WENT WRONG')
+        console.log("REAL ERROR:", error);   // 👈 THIS WAS MISSING
+        res.status(500).send(error.message); // 👈 return real reason
     }
 }
 
@@ -30,7 +34,7 @@ async function getTripDetailsController(req,res){
         .then(doc => res.send(doc))
         .catch(err => res.send('SOMETHING WENT WRONG WHILE FETCHING'))
     }catch(error){
-        console.log('ERROR')
+        console.log("REAL ERROR:", error);
         res.send('SOMETHING WENT WRONG')
     }
 }
@@ -41,8 +45,9 @@ async function getTripDetailsByIdController(req,res){
         .then(doc => res.send(doc))
         .catch(err => res.send('Nothing in database'))
     }catch(error){
-        console.log('ERROR')
+        console.log("REAL ERROR:", error);
         res.send('SOMETHING WENT WRONG')
     }
 }
-module.exports = { tripAdditionController, getTripDetailsController, getTripDetailsByIdController }
+
+module.exports = { tripAdditionController, getTripDetailsController, getTripDetailsByIdController };
