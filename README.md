@@ -153,6 +153,13 @@ Ansible web.yml :
 PM2 Status : 
 <img width="1440" height="900" alt="Screenshot 2026-04-23 at 12 27 06" src="https://github.com/user-attachments/assets/451835c8-880c-4c54-ba5f-97c7ea0b0599" />
 
+Mongo Db Running :
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 12 30 37" src="https://github.com/user-attachments/assets/fb7bb45e-166c-451f-afad-0011d010cef4" />
+
+PM2 logs BE : 
+<img width="1440" height="900" alt="Screenshot 2026-04-23 at 12 35 39" src="https://github.com/user-attachments/assets/6304faec-8103-4af3-8bc4-d1b088fe0e7d" />
+
+
 
 
 ## 👨‍💻 Author
